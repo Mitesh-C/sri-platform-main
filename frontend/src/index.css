@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 14% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 237 54% 47%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 13% 95%;
+    --secondary-foreground: 217 33% 17%;
+    --muted: 220 13% 95%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 237 54% 94%;
+    --accent-foreground: 237 54% 47%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 237 54% 47%;
+    --radius: 1rem;
+  }
+
+  .dark {
+    --background: 240 10% 4%;
+    --foreground: 0 0% 98%;
+    --card: 240 6% 10%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 6% 10%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 237 54% 60%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4% 15%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 4% 15%;
+    --muted-foreground: 240 5% 64%;
+    --accent: 237 54% 25%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 4% 15%;
+    --input: 240 4% 15%;
+    --ring: 237 54% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans;
+  }
+}
+
+/* Hide Emergent branding */
+[class*="emergent"],
+[id*="emergent"],
+a[href*="emergentagent.com"],
+div[style*="position: fixed"],
+div[style*="z-index: 9999"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
